@@ -5,6 +5,6 @@ import { makeLogControllerDecorator } from '../../../decorators/log-controller-d
 import { Controller } from '../../../../../presentation/protocols'
 
 export const makeAddSurveyController = (): Controller => {
-  const loginController = new AddSurveyController(makeAddSurveyValidation(), makeDbAddSurvey())
-  return makeLogControllerDecorator(loginController)
+  const surveyController = new AddSurveyController(makeAddSurveyValidation(), makeDbAddSurvey())
+  return makeLogControllerDecorator(surveyController)
 }
