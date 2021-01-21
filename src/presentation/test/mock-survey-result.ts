@@ -6,7 +6,7 @@ import { SaveSurveyResult } from '@/presentation/controllers/survey-result/save-
 export const makeSaveSurveyResult = (): SaveSurveyResult => {
   class SaveSurveyResultStub implements SaveSurveyResult {
     async save (data: SaveSurveyResultParams): Promise<SurveyResultModel> {
-      return new Promise(resolve => resolve(mockSurveyResultModel()))
+      return Promise.resolve(mockSurveyResultModel())
     }
   }
   return new SaveSurveyResultStub()
