@@ -19,8 +19,8 @@
     "check": "npm-check -s -u"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Giancarlo Wisinewski Gomes",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.2.3",
     "@types/bcrypt": "^3.0.0",
