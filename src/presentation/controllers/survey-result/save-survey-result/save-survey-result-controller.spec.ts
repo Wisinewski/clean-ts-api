@@ -5,8 +5,7 @@ import { SaveSurveyResultController } from './save-survey-result-controller'
 import { forbidden, serverError, ok } from '@/presentation/helpers/http/http-helper'
 
 import MockDate from 'mockdate'
-import { mockLoadSurveyById } from '@/presentation/test/mock-survey'
-import { mockSaveSurveyResultRepository } from '@/data/test'
+import { mockLoadSurveyById, mockSaveSurveyResult } from '@/presentation/test'
 
 const mockRequest = (): HttpRequest => ({
   params: {
@@ -26,7 +25,7 @@ type SutTypes = {
 
 const makeSut = (): SutTypes => {
   const loadSurveyByIdStub = mockLoadSurveyById()
-  const saveSurveyResultStub = mockSaveSurveyResultRepository()
+  const saveSurveyResultStub = mockSaveSurveyResult()
   const sut = new SaveSurveyResultController(loadSurveyByIdStub, saveSurveyResultStub)
   return {
     sut,
